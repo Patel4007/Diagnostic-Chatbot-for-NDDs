@@ -1,0 +1,238 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- check_similarity
+- check_compulsive
+- check_interaction
+- greet
+- affirm
+- check_autism
+- patient_name_entered
+- emailid
+- otpwrd
+- login
+- passwrd
+- create_account
+- deny
+- say_fact
+- mood_great
+- whatsup
+- react_good
+- notalk
+- mood_unhappy
+- sleep
+- need_help
+- ask_for_summary
+- goodbye
+- name_entered
+- say_relation
+- meeting_response
+- address
+- bot_challenge
+- good_friend
+- Good
+- suggestion
+- chat
+- hobby
+- indifferent
+- Sure
+- well_done
+- welcome
+- wrong
+entities:
+- CARDINAL
+- DATE
+- PERSON
+- email
+- emails
+- passwd
+- otpwd
+- first
+- relation
+- similarity
+- compulsive
+- interaction
+slots:
+  first:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: first
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+  emails:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: emails
+  passwd:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: passwd
+  otpwd:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: otpwd
+  relation:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: relation
+  attention:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: true
+      intent: affirm
+    - type: from_intent
+      value: false
+      intent: deny
+  response:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: true
+      intent: affirm
+    - type: from_intent
+      value: false
+      intent: deny
+  similarity:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: similarity
+  compulsive:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: compulsive
+  interaction:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: interaction
+
+responses:
+  utter_greet:
+  - text: Hi
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_question:
+  - text: 'Answer this question: '
+  utter_help:
+  - text: Sure, how may I help you ?
+  utter_happy:
+  - text: Glad you liked it
+  utter_goodbye:
+  - text: Bye
+  utter_howareyou:
+  - text: Hey! How are you ?
+  utter_good:
+  - text: That's great. I am happy for you
+  utter_funny:
+  - text: I'm usually not that funny, but I am artificially intelligent
+  utter_indifferent:
+  - text: Ok cool
+  utter_negative:
+  - text: you seem upset. Let me try and help you.
+  utter_positive:
+  - text: Thanks!
+  utter_angry:
+  - text: I'm sorry. How may I help you ?
+  utter_submit:
+  - text: Thanks for providing the details
+  utter_sleep:
+  - text: Maybe some music can help.
+  - text: Reading is good way to unwind
+  utter_notalk:
+  - text: I understand. Hope we can chat again soon.
+  utter_joke:
+  - text: you are quite funny
+  - text: you have good sense of humour
+  utter_lonely:
+  - text: I am here if you need someone to talk to
+  utter_sad:
+  - text: what's wrong ?
+  - text: what's the matter ?
+  utter_talk:
+  - text: I'm here to chat anytime you like
+  utter_likes:
+  - text: I like travelling across discord and helping in anyway I can
+  utter_iamabot:
+  - text: Hi, I am a bot
+  utter_name:
+  - text: |-
+      Hi, I am Rasa 
+      what is your name ?
+  utter_beforechat:
+  - text: |-
+      Before we start our conversation, I want to take-in some user details.
+      This data is important for gaining access to the service and getting to know about eachother
+      Can I ask you some questions ?
+  utter_ask:
+  - text: what is your name ?
+  utter_email:
+  - text: what is your email ?
+  utter_mail:
+  - text: Enter your email id
+  utter_password:
+  - text: please enter your password
+  utter_thanks:
+  - text: Thanks for the input
+  utter_default:
+  - text: Sorry, I didn't understand. Try Again
+  utter_custom:
+  - text: Sorry, I didn't get that, please try again
+  utter_fact:
+  - text: 'Fun Fact: There are more trees on earth than stars in the milky way'
+  - text: "Fun Fact: Earth's oxygen is produced by the ocean"
+  - text: 'Fun Fact: There are over two dozen states of matter'
+  - text: 'Fun Fact: Water can boil and freeze at the same time'
+  utter_ask_relation:
+  - text: How are you related to the autistic person ?
+
+actions:
+- action_affirm
+- action_attention
+- action_response
+- action_final_output
+- action_custom_fallback
+- action_hello_world
+- action_input_verifier
+- action_passwrd
+- action_relation
+- action_patient_name
+- action_similarity
+- action_summary
+- action_email
+- action_login
+- action_mail
+- action_otpwrd
+- action_world
+- validate_action_form
+forms:
+  action_form:
+    required_slots:
+    - attention
+    - response

@@ -1,0 +1,96 @@
+version: "3.0"
+
+stories:
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: deny
+  - action: utter_sad
+  - intent: notalk
+  - action: utter_notalk
+
+- story: interactive_story_4
+  steps:
+  - intent: whatsup
+  - action: utter_howareyou
+  - intent: mood_great
+  - action: utter_good
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: say_fact
+  - action: utter_fact
+  - intent: react_good
+  - action: utter_happy
+
+
+- story: activate_action_1
+  steps:
+  - or:
+    - intent: check_similarity
+    - intent: check_compulsive
+    - intent: check_interaction
+  - action: action_attention
+  - intent: affirm
+  - action: action_response
+
+
+- story: activate_action_2
+  steps:
+  - or:
+    - intent: check_similarity
+    - intent: check_compulsive
+    - intent: check_interaction
+  - action: action_attention
+  - intent: deny
+  - action: action_response
+  - intent: deny
+  - action: action_final_output
+
+- story: activate_action_3
+  steps:
+  - or:
+    - intent: check_similarity
+    - intent: check_compulsive
+    - intent: check_interaction
+  - action: action_attention
+  - intent: deny
+  - action: action_response
+  - intent: affirm
+  - action: action_final_output
+
+
+- story: activate_signin
+  steps:
+  - intent: login
+  - action: utter_mail
+  - intent: address
+  - action: action_mail
+  - intent: passwrd
+  - action: action_passwrd
+
+- story: activate_signup
+  steps:
+  - intent: create_account
+  - action: utter_name
+  - intent: name_entered
+  - action: action_hello_world
+  - intent: say_relation
+  - action: action_relation
+  - intent: patient_name_entered
+  - action: action_patient_name
+  - intent: address
+  - action: action_mail
+  - intent: passwrd
+  - action: action_passwrd
+
+- story: wrong_password
+  steps:
+  - intent: otpwrd
+  - action: action_otpwrd

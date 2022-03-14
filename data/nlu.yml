@@ -1,0 +1,494 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hey
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: react_good
+  examples: |
+    - woah nice
+    - cool
+    - nice fact
+- intent: say_fact
+  examples: |
+    - can you say a fact ?
+    - can you say a fact
+    - tell me a fact
+    - say a fact
+- intent: affirm
+  examples: |
+    - Yes
+    - yes
+    - y
+    - yup
+    - indeed
+    - yeah
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - why not
+    - go ahead
+- intent: name_entered
+  examples: |
+    - [my](first) name is [Jay](first)
+    - Hi [my](first) name is [Hirak](first)
+    - Hi [my](first) name is [Demo](first)
+    - Hi [I](first) am [Nirmit](first)
+    - Hi [I](first) am [Demo](first)
+    - Hello [my](first) name is [Jay](first)
+    - Hello [I](first) am [Demo](first)
+    - [myself](first) [Hirak](first)
+    - [my](first) name is [Hirak](first)
+    - [My](first) name is [Nirmit](first)
+    - [My](first) name is [Demo](first)
+- intent: patient_name_entered
+  examples: |
+    - [his](patient) name is [Jay](patient)
+    - [her](patient) name is [Hirak](patient)
+    - [Her](patient) name is [Demo](patient)
+    - [His](patient) name is [Nirmit](patient)
+    - [Jay](patient)
+    - my child's [name](patient) is [Hirak](patient)
+    - my kid's [name](patient) is [Jay](patient)
+    - [Nirmit](patient)
+    - Hello [her](patient) name is [Demo](patient)
+    - Hello [his](patient) name is [Nirmit](patient)
+    - [Hirak](patient)
+    - [Demo](patient) is her [name](patient)
+    - [Jay](patient) is his [name](patient)
+- intent: say_relation
+  examples: |
+    - I am his [father](relation)
+    - [Father](relation)
+    - [mother](relation)
+    - I am her [Mother](relation)
+    - I am his [brother](relation)
+    - [Brother](relation)
+    - [sister](relation)
+    - I am her [Sister](relation)
+    - I am his [friend](relation)
+    - [friend](relation)
+    - [mother](relation)
+    - [father daughter relationship](relation)
+    - [father son relationship](relation)
+    - [mother son relationship](relation)
+    - [mother daughter relationship](relation)
+    - [guardian](relation)
+    - I am her [guardian](relation)
+    - I am his [teacher](relation)
+    - I am her [grandmother](relation)
+    - I am his [grandfather](relation)
+    - [I am his grandmother](relation)
+    - [I am her grandfather](relation)
+    - [elder cousin](relation)
+- intent: meeting_response
+  examples: |
+    - nice to meet you too
+    - Nice to meet you too
+    - same here
+    - same
+    - pleased to meet you
+    - Pleased to meet you too
+- intent: deny
+  examples: |
+    - No
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am excited
+    - I'm really excited
+    - I'm thrilled
+    - I am very happy
+    - I'm excited to start our friendship
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I am upset
+    - I am very angry
+    - this is really bad
+    - that's terrible
+    - that is terrible
+    - this is so bad and pathetic
+    - this is so bad
+    - this is so pathetic
+    - you annoy me
+    - you are terrible
+    - I'm greiving
+    - I'm having a bad day
+    - I want to cry
+    - I'm not happy
+- intent: chat
+  examples: |
+    - I just want to talk
+    - let's discuss something
+    - let's have a discussion
+    - I want to talk to you
+    - I want to talk with you
+    - I want to speak to you
+    - can we chat
+    - can we talk
+    - I need to talk to you
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: need_help
+  examples: |
+    - I needed some help
+    - I need some help
+    - I need help
+    - I want help
+    - Hi, can you help me?
+- intent: ask_for_summary
+  examples: |
+    - I wanted summary
+    - I want summary
+    - I want to read about my kid's behaviour
+    - summary
+    - give me summary
+    - output summary
+    - I want to see the summary
+    - I wanted the summary
+    - give me the weekly information
+    - give me weekly progress
+    - display weekly progress
+    - display weekly summary
+    - give me weekly summary
+    - I want weekly summary
+    - I want to look the summary
+    - tell me the summary
+    - show me my kid's progress
+    - show me info about my child's progress
+    - give me info about my child's progress
+- intent: login
+  examples: |
+    - login
+    - signin
+    - log in
+    - I want to login
+    - I wanna Login
+    - please sign me in
+    - I want to sign in
+    - I would like to sign in
+    - I would like to login
+    - sign in
+    - I will login
+- intent: create_account
+  examples: |
+    - sign up
+    - signup
+    - I want to sign up
+    - I would like to create an account
+    - create account
+    - I will create account
+    - sign me up
+- intent: good_friend
+  examples: |
+    - I am your friend
+    - I want to br your friend
+    - are we best friends
+    - are we still friends
+    - let's be friends
+    - we are friends
+    - are we friends
+    - we are best friends
+    - we are the best friends ever
+- intent: Good
+  examples: |
+    - you are cool
+    - you are so cool
+    - you are so helpful
+    - you are too good
+    - you are very kind
+    - you are very lovely
+    - you made my day
+    - you work very well
+    - you're great
+    - you're awesome
+    - you work well
+    - you know so much
+    - you rock
+    - you are a genius
+    - you are clever
+    - you're so smart
+    - you are really nice
+    - you're really nice
+    - you're intelligent
+    - you're super
+    - you are super
+    - you are wonderful
+- intent: whatsup
+  examples: |
+    - what is on your mind
+    - what's happened
+    - what is up
+    - what's up
+    - what is going on
+    - what is happening
+    - what's up today
+    - wassup
+    - hey what's up
+- intent: suggestion
+  examples: |
+    - what is your advice
+    - what do you suggest
+    - what should I do about it
+    - any suggestions
+    - advice me
+    - advise me
+    - can you give a suggestion
+    - can you give me advice
+- intent: sleep
+  examples: |
+    - I am insomniac
+    - I am insomnious
+    - I'm insomnious
+    - I'm insomniac
+    - I can't get any sleep
+    - I cannot get any sleep
+    - I can't fall asleep
+    - I have difficulty in sleeping
+    - I have sleep issues
+    - I can't get to sleep
+    - I can't get no sleep
+- intent: notalk
+  examples: |
+    - I don't want to chat now
+    - I don't wanna chat now
+    - no mood to chat
+    - I'm not in a mood to chat
+    - I don't want to talk to you
+    - I am in no mood to chat
+    - I'm in no mood to chat with you
+    - I'm not in the mood for chatting
+- intent: hobby
+  examples: |
+    - what do you do for fun
+    - what are your hobbies?
+    - what is your hobby?
+    - tell me about your hobby
+    - do you have a hobby
+    - what about your hobby
+    - what do you like?
+    - what do you like
+- intent: indifferent
+  examples: |
+    - no hurry
+    - no rush
+    - no big deal
+    - don't mind at all
+    - don't mind
+    - idc
+    - I don't care
+    - I don't care at all
+    - I do not care about it
+    - I don't care about it
+    - not caring
+- intent: passwrd
+  examples: |
+    - my password is [abc@5007](passwd)
+    - [er#3457](passwd)
+    - [try&57483](passwd)
+    - [fkks&k&s](passwd)
+    - password is [wer@#4005](passwd)
+    - [vir$us&delt@](passwd)
+    - password is [3004&bd](passwd)
+    - here is my password [yo%rkhe7ll](passwd)
+
+- regex: passwd
+  examples: |
+    - ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{7,20}$
+
+- intent: otpwrd
+  examples: |
+    - my otp is [50ab9](otpwd)
+    - [2b33f](otpwd)
+    - [e103c](otpwd)
+    - [n3$2j](otpwd)
+    - password is [w5e4r](otpwd)
+    - [v3d7h](otpwd)
+    - password is [0w4bd](otpwd)
+    - here is my password [y19hv](otpwd)
+
+- regex: otpwd
+  examples: |
+    - ^[a-zA-Z0-9]{5,}$
+
+- intent: sign_in
+  examples: |
+    - Hi, I am Rasa, enter 'sign in' or 'login' for user authentication
+    - Hello, I am Rasa, enter 'sign in' or 'login' to get access
+
+- intent: Sure
+  examples: |
+    - are you sure
+    - are you sure right now
+    - are you sure today
+    - are you sure now
+    - are you sure tonight
+- intent: well_done
+  examples: |
+    - good job
+    - great job
+    - well done
+    - nice work
+    - great work
+    - amazing work
+    - bravo
+    - good work
+- intent: welcome
+  examples: |
+    - that's my pleasure
+    - my pleasure
+    - welcome
+    - anytime
+    - you're welcome
+    - you are welcome
+    - welcome here
+    - sure welcome
+    - anything for you
+- intent: wrong
+  examples: |
+    - that was wrong
+    - that's wrong
+    - that's not what I asked
+    - wrong
+    - that is incorrect
+    - incorrect
+    - not correct
+    - you are wrong
+    - totally wrong
+    - not right
+
+- intent: address
+  examples: |
+    - my email id is [patel41100@gmail.com](email)
+    - my email address is [abc@yahoo.com](email)
+    - my email is [xyz@hotmail.com](email)
+    - [googol@gmail.com](email)
+    - [mno@yahoo.com](email)
+    - [pqr@hotmail.com](email)
+
+- regex: email
+  examples: |
+    - \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b
+
+- intent: check_similarity
+  examples: |
+    - my son does not [concentrate](similarity)
+    - my daughter is [not concentrating](similarity)
+    - [lack of focus](similarity) or [difficulty in concentration](similarity)
+    - my child is [unable to concentrate](similarity)
+    - he was [not attentive](similarity)
+    - [she was](similarity) [not attentive](similarity)
+    - [she](similarity) is [inattentive](similarity)
+    - [he](similarity) is [inattentive](similarity)
+    - lack of [concentration](similarity)
+    - [he](similarity) seems [absent-minded](similarity)
+    - she [doesn't play or respond](similarity)
+    - [does not respond](similarity)
+    - [does not play](similarity)
+    - he has [difficulty with walking](similarity)
+    - she has [difficulty in walking](similarity)
+    - [my daughter](similarity) shows [slow movement](similarity)
+    - [very fast movement](similarity)
+    - she is [tripping](similarity)
+    - he [tripped](similarity)
+    - [my child has issues in walking](similarity)
+    - my child has [issues with walking](similarity)
+    - [my child has issues in walking](similarity)
+    - [flaps hands](similarity) or [rocks body](similarity) or [spins self in circles](similarity)
+    - [flapping](similarity)
+    - [hand flapping](similarity)
+    - he does activities [repetitively](similarity)
+    - [climbing the stairs](similarity)
+    - [over excited](similarity) or [over excitement](similarity)
+    - he [does not keep an eye contact](similarity)
+    - [problems with keeping an eye contact](similarity)
+    - [frequent emotional reactions](similarity)
+    - she [does not respond to name](similarity)
+    - he has [delayed movement](similarity)
+    - [poor movement skills](similarity) or [no movement skills](similarity)
+    - [unusual reactions](similarity)
+    - [repeats words](similarity) or [echolalia](similarity)
+
+- intent: check_compulsive
+  examples: |
+    - my son [repeats sentences](compulsive) or [repeats phrases](compulsive)
+    - he does not stop [counting](compulsive)
+    - today he continued [tapping](compulsive)
+    - my kid gets upset when his [routine is disrupted](compulsive)
+    - she [doesn't like to go against a plan](compulsive)
+    - he [repetitively lines up his toys](compulsive)
+    - my daughter likes to stare at [spin objects](compulsive) or [spinning objects](compulsive)
+    - [repetitively closing doors](compulsive) or [repetitively opening windows](compulsive)
+
+- intent: check_interaction
+  examples: |
+    - my child [keeps avoiding physical contact](interaction)
+    - [he does not respond to his name](interaction)
+    - she is [not responsive](interaction)
+    - my son [doesn't give a response](interaction)
+    - daughter [does not speak](interaction)
+    - he [doesn't make gestures](interaction)
