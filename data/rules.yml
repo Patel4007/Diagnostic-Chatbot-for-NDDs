@@ -1,0 +1,33 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond if user input is not clear
+  steps:
+  - intent: nlu_fallback
+  - action: action_custom_fallback
+
+- rule: Output Summary
+  steps:
+  - intent: ask_for_summary
+  - action: action_summary
+
+- rule: do_something
+  steps:
+  - action: action_custom_fallback
+  - action: action_similarity
+
+- rule: output something
+  steps:
+  - action: action_similarity
+  - action: action_summary
