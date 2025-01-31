@@ -18,6 +18,10 @@ This project is a Diagnostic Chatbot designed to assist in the preliminary ident
 
 **Resource Recommendations**: Offers links to trusted resources and core knowledge about NDDs.
 
+## Project Output
+
+![Output Diagram 1](images/Pic7.png)
+
 ## Installation
 
 ### Clone the Repository:
