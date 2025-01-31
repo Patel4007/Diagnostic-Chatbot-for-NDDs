@@ -21,7 +21,7 @@ This project is a Diagnostic Chatbot designed to assist in the preliminary ident
 ## Project Output
 
 <p align="center">
-  <img src="images/pic1.JPG" width="250" height="350">
+  <img src="images/pic_4.JPG" width="250" height="350">
   <img src="images/pic7.JPG" width="250" height="350">
   <img src="images/pic5.JPG" width="250" height="350">
 </p>
