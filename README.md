@@ -20,7 +20,7 @@ This project is a Diagnostic Chatbot designed to assist in the preliminary ident
 
 ## Project Output
 
-![Output Diagram 1](images/Pic7.png)
+![Output Diagram 1](images/pic7.png)
 
 ## Installation
 
